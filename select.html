@@ -10,9 +10,14 @@
 </head>
 
 <body>
-  <header><header> <div class="iconbox">
-    <a href="index.html"><img src="images/icon.png" alt="" class="icon"></a>  
-  </div></header></header>
+  <header>
+    <header>
+      <div class="color">
+        <div class="iconbox">
+          <a href="index.html"><img src="images/icon.png" alt="" class="icon"></a>
+        </div>
+    </header>
+  </header>
   <div class="all">
     <div class="movie">
       <label>Pick a movie:</label>
@@ -52,8 +57,18 @@
     <div class="payment">
       <label>Choose payment option:</label>
       <select id="payment2">
-        <option value="250">card</option>
-        <option value="220">UPI</option>
+        <input type="checkbox" id="check1">card
+        <input type="checkbox" id="check2">UPI
+        <div class="paytm" id="paytm">
+          <input type="text" placeholder="enter your UPI">
+          <button>Pay NOw</button>
+        </div>
+        <div class="credit" id="credit">
+          <input type="text" placeholder="enter Name ">
+          <input type="number" placeholder="card no.">
+          <input type="date" placeholder="valid date">
+          <button>Pay Now</button>
+        </div>
 
       </select>
     </div>
@@ -61,6 +76,33 @@
       <a href="seats.html"><button class="submit2">choose seats</button></a>
     </div>
   </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script>
+    $("#check2").change(function () {
+      if ($(this).is(':checked')) {
+        document.getElementById("paytm").style.visibility = "visible";
+        $("#paytm").fadeIn(200);
+        $("#credit").fadeOut(200);
+      }
+      else {
+        $("#paytm").fadeOut(200);
+        document.getElementById("paytm").style.visibility = "hidden";
+      }
+    });
+    $("#check1").change(function () {
+      if ($(this).is(':checked')) {
+        document.getElementById("credit").style.visibility = "visible";
+        $("#credit").fadeIn(200);
+        $("#paytm").fadeOut(200);
+      }
+      else {
+        $("#credit").fadeOut(200);
+        document.getElementById("credit").style.visibility = "hidden";
+      }
+    });
+
+  </script>
 
 </body>
 

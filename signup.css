@@ -9,7 +9,7 @@
 
 
 body{
-    background-color: rgb(194, 205, 219);
+    background-image: -webkit-linear-gradient(65deg, #013A6B 50%, #004E95 50%);
 }
 .register{
    position: absolute;

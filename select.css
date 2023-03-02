@@ -3,13 +3,19 @@ body{
     padding: 0;
    
    
+   
 }
+.color{
+    background-image: -webkit-linear-gradient(65deg, #386994 50%, #01407b 50%);
+}
+
 .all{
     position: absolute;
     left: 25%;
     top: 25%;
     font-size: 25px;
     padding-bottom: 10px;
+    background-color: white;
   
 
 }
@@ -33,4 +39,10 @@ select{
     height: 48px;
    position: absolute;
    left: 2%;
+}
+#paytm{
+    visibility: hidden;
+}
+#credit{
+    visibility: hidden;
 }
