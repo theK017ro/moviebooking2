@@ -1,4 +1,4 @@
-var arr = [];
+let  arr = [];
 a=0;
 
 
